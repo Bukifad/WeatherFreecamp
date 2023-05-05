@@ -94,6 +94,9 @@ export default function UpcomingWeather() {
       <Text>hello</Text>
       <Text>hello</Text>
       <Text>hello</Text>
+      <Text>hello</Text>
+      <Text>hello</Text>
+      <Text>hello</Text>
     </SafeAreaView>
   );
 }
