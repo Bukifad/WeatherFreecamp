@@ -17,14 +17,27 @@ const City = () => {
         style={styles.imageLayout}>
         <Text style={[styles.CityName, styles.CityText]}>london</Text>
         <Text style={[styles.CountryName, styles.CityText]}>Uk</Text>
-        <View style={styles.populationWrapper}>
-          <IconText iconName={'👧🏾'} bodyText={800} />
+        <View style={[styles.populationWrapper, styles.rowLayer]}>
+          <IconText
+            iconName={'👧🏾'}
+            iconColor={'red'}
+            bodyText={'8000'}
+            bodyTextStyle={styles.populationText}
+          />
         </View>
-        <View style={styles.riseSetWrapper}>
-          <Text style={{fontSize: 30}}>🌅</Text>
-          <Text style={styles.riseSetText}>10:46:58am</Text>
-          <Text style={{fontSize: 30}}>🌆</Text>
-          <Text style={styles.riseSetText}>17:34:18pm</Text>
+        <View style={[styles.riseSetWrapper, styles.rowLayer]}>
+          <IconText
+            iconName={'🌅'}
+            iconColor={''}
+            bodyText={'10:46:58am'}
+            bodyTextStyle={styles.riseSetText}
+          />
+          <IconText
+            iconName={'🌆'}
+            iconColor={''}
+            bodyText={'17:34:18pm'}
+            bodyTextStyle={styles.riseSetText}
+          />
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -52,8 +65,6 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   populationWrapper: {
-    flexDirection: 'row',
-    alignItem: 'center',
     justifyContent: 'center',
     marginTop: 30,
   },
@@ -63,14 +74,16 @@ const styles = StyleSheet.create({
     marginLeft: 7.5,
   },
   riseSetWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-around',
     marginTop: 30,
   },
   riseSetText: {
     fontSize: 20,
     color: 'white',
+  },
+  rowLayer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });
 export default City;

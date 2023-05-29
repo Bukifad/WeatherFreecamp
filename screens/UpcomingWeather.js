@@ -6,7 +6,7 @@ import {
   FlatList,
   ImageBackground,
 } from 'react-native';
-import ListItem from '../src/ListItems';
+import ListItem from '../src/components/ListItems';
 
 const DATA = [
   {

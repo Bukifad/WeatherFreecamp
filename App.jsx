@@ -1,24 +1,18 @@
 import React from 'react';
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
-import City from './screens/City';
-import CurrentWeather from './screens/CurrentWeather';
-import UpcomingWeather from './screens/UpcomingWeather';
+
+import {NavigationContainer} from '@react-navigation/native';
+import Tabs from './src/components/Tabs';
 
 // import Icon from 'react-native-vector-icons/FontAwesome';
 // import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <CurrentWeather /> */}
-      {/* <UpcomingWeather /> */}
-      <City />
-    </View>
+    <NavigationContainer>
+      <Tabs />
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+const styles = StyleSheet.create({});

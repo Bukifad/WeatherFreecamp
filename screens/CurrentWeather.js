@@ -1,5 +1,7 @@
 import React from 'react';
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
+import RowText from '../src/components/RowText';
+import {WeatherType} from '../src/utilities/WeatherTypes';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 // import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -11,15 +13,21 @@ export default function CurrentWeather() {
         <Text style={{fontSize: 60}}>☀️</Text>
         <Text style={styles.temp}>6</Text>
         <Text style={styles.feels}>feels like 5</Text>
-        <View style={styles.highLowWrapper}>
-          <Text style={styles.highLow}>High:8 </Text>
-          <Text style={styles.highLow}>Low:6</Text>
-        </View>
+        <RowText
+          messageOne={'High:8'}
+          messageTwo={'Low:6'}
+          containerStyles={styles.highLowWrapper}
+          messageOneStyles={styles.highLow}
+          messageTwoStyles={styles.highLow}
+        />
       </View>
-      <View style={styles.bodyWrapper}>
-        <Text style={styles.description}>Its sunny</Text>
-        <Text style={styles.message}>It is perfect t-shirt weather</Text>
-      </View>
+      <RowText
+        messageOne={'Its sunny'}
+        messageTwo={WeatherType}
+        containerStyles={styles.bodyWrapper}
+        messageOneStyles={styles.description}
+        messageTwoStyles={styles.message}
+      />
     </SafeAreaView>
   );
 }
