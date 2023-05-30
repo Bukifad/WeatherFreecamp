@@ -23,7 +23,7 @@ export default function CurrentWeather() {
       </View>
       <RowText
         messageOne={'Its sunny'}
-        messageTwo={WeatherType}
+        messageTwo={WeatherType['Thunderstorm'].message}
         containerStyles={styles.bodyWrapper}
         messageOneStyles={styles.description}
         messageTwoStyles={styles.message}
